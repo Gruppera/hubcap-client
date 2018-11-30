@@ -17,7 +17,7 @@ namespace Hubcap.TestClient
             var x = QueryParam<int>("X", param);
             var y = QueryParam<int>("Y", param);
 
-            var r = GameApi.Client.PutAsync($"api/game/move?GameKey={_game.GameKey}&PlayerKey={_game.PlayerKey}&xMove={x}&yMove={y}",
+            var r = GameApi.Client.PutAsync($"api/game/move?GameKey={_game.GameKey}&PlayerKey={_game.PlayerKey}&x={x}&y={y}",
                     new ByteArrayContent(new byte[0])).GetAwaiter().GetResult();
             if (!r.IsSuccessStatusCode)
                 OutputError(r.Content.ReadAsStringAsync().GetAwaiter().GetResult());
