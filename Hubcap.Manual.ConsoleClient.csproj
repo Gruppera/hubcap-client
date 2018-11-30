@@ -46,7 +46,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="Tharga.Toolkit.Console, Version=2.0.64.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Tharga.Toolkit.Console.2.0.64\lib\net45\Tharga.Toolkit.Console.dll</HintPath>
+      <HintPath>packages\Tharga.Toolkit.Console.2.0.64\lib\net45\Tharga.Toolkit.Console.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
