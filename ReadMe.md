@@ -2,7 +2,7 @@
 
   - iwannaplay, getboard are GET
   - move is PUT
-  - Parameters can be either headers or query string
+  - PlayerKey & GameKey parameters can be either headers or query string
   
 ## Endpoints
 
@@ -11,6 +11,7 @@
 |api/game/iwannaplay|Queue you up to play a game|PlayerKey, (optional) opponent|The GameKey for the game you joined||
 |api/game/getboard|Get the gameboard, will freeze request until it's your turn to perform a move|PlayerKey, GameKey|Current state of the game with provided GameKey||
 |api/game/move|Update the state of the game|PlayerKey, GameKey, x, y|Error message if you did something wrong, otherwise OK|To skip turn send x = -1, y = -1|
+|api/help/possibleMoves|Get possible moves on a board|disc, gameBoard|List of x,y for possible moves on a given board||
 
 ## Bots
 
@@ -46,8 +47,12 @@ string
 ### api/game/move
 string
 
+### api/help/possibleMoves
+char[,] as Json
+
 ## Samples...
 
   - api/game/iwannaplay?PlayerKey=asd&opponent=randy
   - api/game/getboard?PlayerKey=asd&GameKey=a329fe5e-6334-4073-975c-0e25054ca5db
   - api/game/move?PlayerKey=asd&GameKey=a329fe5e-6334-4073-975c-0e25054ca5db&x=1&y=4
+  - api/help/possibleMoves?dics=X&gameBoard=...
